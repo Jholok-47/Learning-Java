@@ -1,0 +1,1 @@
+Purpose of this repo is to document the lessons I am learning and test the operations involving git and github.
