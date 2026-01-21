@@ -1,4 +1,5 @@
 public class Problems {
+    // Method to check even and odd numbers in an array and count them
     public static void EvenOdd(int[] arr) {
         int Even = 0;
         int Odd = 0;
@@ -16,6 +17,7 @@ public class Problems {
         System.out.println("Total odd numbers: " + Odd);
     }
 
+    // Method to reverse an array
     public static int[] reverse_array(int[] arr){
         int start = 0;
         int end = arr.length - 1;
@@ -31,7 +33,18 @@ public class Problems {
         return arr;
     }
 
+    // Method to determine the factorial of a number
+    public static int recursive_factorial(int n) {
+        if (n == 0) {
+            return 1;
+        } else {
+            return n * recursive_factorial(n - 1);
+        }
+    }
+
+
     public static void main(String[] args) {
+        int num1 = 6;
         int[] numbers = {12, 35, 1, 10, 34, 1};
         int[] reverse_numbers = new int[6];
 
@@ -42,5 +55,7 @@ public class Problems {
         for(int i = 0; i < reverse_numbers.length; i++) {
             System.out.print(" " + reverse_numbers[i]);
         }
+
+        System.out.println("\n\nFactorial of " + num1 + " is: " + recursive_factorial(num1));
     }
 }
