@@ -97,11 +97,25 @@ public class Problems {
         return true;
     }
 
+    // Method to search an element in an array using linear search algorithm
+    public static boolean linear_search(int n, int[] arr) {
+        for(int i = 0; i < arr.length; i++){
+            if(n == arr[i])
+                return true;
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         int x = 9;
         int y = 13;
+        int z = 36;
         int[] numbers = {12, 35, 1, 10, 34, 1};
         char[] s = {'G', 'K', 'F', 'i', 'F', 'K', 'G'};
+
+        if(linear_search(z, numbers))
+            System.out.println("\n" + z + " exists in the array numbers");
+        else System.out.println("\n" + z + " does not exist in the array numbers.");
 
         int[] reverse_numbers = reverse_array(numbers);
         System.out.print("\nReversed Array: ");
@@ -115,8 +129,7 @@ public class Problems {
 
         if(palindrome(s))
         System.out.println("\n\n" + new String(s) + " is a palindrome.");
-        else
-        System.out.println("\n\n" + new String(s) + " is not a palindrome.");
+        else System.out.println("\n\n" + new String(s) + " is not a palindrome.");
 
         if(prime_check(y))
             System.out.println("\n" + y + " is a prime number");
