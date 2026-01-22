@@ -41,6 +41,29 @@ public class Patterns {
         }
     }
 
+    // Method to print an upper left numerical triangle
+    public static void ul_triangle(int a) {
+        for(int i = 0; i < a; i++){
+            for(int j = 0; j < a - i; j++){
+                System.out.print(j);
+            }
+            System.out.println("");
+        }
+    }
+
+    // Method to print an upper right numerical triangle
+    public static void ur_triangle(int a) {
+        for(int i = 0; i < a; i++){
+            for(int j = 0; j < i; j++){
+                System.out.print(" ");
+            }
+            for(int k = 0; k < a - i; k++){
+                System.out.print(k);
+            }
+            System.out.println("");
+        }
+    }
+
     // Method to print a numerical square
     public static void num_square(int a) {
         for(int i = 1; i <= a; i++){
@@ -80,6 +103,12 @@ public class Patterns {
         System.out.println("");
 
         lr_triangle(x);
+        System.out.println("");
+
+        ul_triangle(x);
+        System.out.println("");
+
+        ur_triangle(x);
         System.out.println("");
 
         num_square(x);
