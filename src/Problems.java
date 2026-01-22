@@ -42,20 +42,71 @@ public class Problems {
         }
     }
 
-
-    public static void main(String[] args) {
-        int num1 = 6;
-        int[] numbers = {12, 35, 1, 10, 34, 1};
-        int[] reverse_numbers = new int[6];
-
-        EvenOdd(numbers);
-        reverse_numbers = reverse_array(numbers);
-
-        System.out.println("\nReversed Array:");
-        for(int i = 0; i < reverse_numbers.length; i++) {
-            System.out.print(" " + reverse_numbers[i]);
+    // Method to print the fibonacci series upto a given number
+    public static int[] fibonacci(int n) {
+        if(n == 0){
+            int[] arr = new int[1];
+            return arr;
         }
 
+        int[] arr = new int[n];
+        arr[0] = 0;
+        if(n == 1){ return arr; }
+
+        arr[1] = 1;
+        if(n == 2){ return arr; }
+        for(int i = 0; i < n - 2; i++){
+            arr[i+2] = arr[i+1] + arr[i];
+        }
+        return arr;
+    }
+
+    // Method to check if a string is palindrome or not
+    public static boolean palindrome(char[] str) {
+        int left = 0;
+        int right = str.length - 1;
+        while(left < right){
+            if(str[left] == str[right]) {
+                left++;
+                right--;
+                continue;
+            } else {
+                break;
+            }
+        }
+        if(str.length/2 == left)
+            return true;
+        else
+            return false;
+    }
+
+    //Method to print a 1 dimensional array of integers
+    public static void print_array(int[] arr) {
+        for(int i = 0; i < arr.length; i++){
+            System.out.print(arr[i] + ", ");
+        }
+    }
+
+    public static void main(String[] args) {
+            char[] s = {'G', 'K', 'F', 'i', 'F', 'K', 'G'};
+        int num1 = 9;
+        int[] numbers = {12, 35, 1, 10, 34, 1};
+
+        EvenOdd(numbers);
+
+        int[] reverse_numbers = reverse_array(numbers);
+        System.out.print("\nReversed Array: ");
+        print_array(reverse_numbers);
+
         System.out.println("\n\nFactorial of " + num1 + " is: " + recursive_factorial(num1));
+
+        int[] fibo = fibonacci(num1);
+        System.out.print("\nFibonacci series upto number " + num1 + " is: ");
+        print_array(fibo);
+
+        if(palindrome(s))
+        System.out.println(new String(s) + " is a palindrome.");
+        else
+        System.out.println(new String(s) + " is not a palindrome.");
     }
 }
