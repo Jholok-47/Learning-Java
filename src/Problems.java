@@ -1,6 +1,14 @@
 public class Problems {
+    // Method to print a 1 dimensional array of integers
+    public static void print_array(int[] arr) {
+        for(int i = 0; i < arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
+    }
+
     // Method to check even and odd numbers in an array and count them
     public static void EvenOdd(int[] arr) {
+        System.out.println("");
         int Even = 0;
         int Odd = 0;
         for(int i = 0; i < arr.length; i++) {
@@ -80,13 +88,6 @@ public class Problems {
             return false;
     }
 
-    // Method to print a 1 dimensional array of integers
-    public static void print_array(int[] arr) {
-        for(int i = 0; i < arr.length; i++){
-            System.out.print(arr[i] + ", ");
-        }
-    }
-
     // Method to determine if a number is prime or not
     public static boolean prime_check(int n) {
         for(int i = n - 1; i > 1; i--){
@@ -102,8 +103,6 @@ public class Problems {
         int[] numbers = {12, 35, 1, 10, 34, 1};
         char[] s = {'G', 'K', 'F', 'i', 'F', 'K', 'G'};
 
-        EvenOdd(numbers);
-
         int[] reverse_numbers = reverse_array(numbers);
         System.out.print("\nReversed Array: ");
         print_array(reverse_numbers);
@@ -115,12 +114,14 @@ public class Problems {
         print_array(fibo);
 
         if(palindrome(s))
-        System.out.println(new String(s) + " is a palindrome.");
+        System.out.println("\n\n" + new String(s) + " is a palindrome.");
         else
-        System.out.println(new String(s) + " is not a palindrome.");
+        System.out.println("\n\n" + new String(s) + " is not a palindrome.");
 
         if(prime_check(y))
-            System.out.println(y + "\n is a prime numer");
-        else System.out.println(y + "\n is not a prime number");
+            System.out.println("\n" + y + " is a prime number");
+        else System.out.println("\n" + y + " is not a prime number");
+
+        EvenOdd(numbers);
     }
 }
