@@ -80,17 +80,27 @@ public class Problems {
             return false;
     }
 
-    //Method to print a 1 dimensional array of integers
+    // Method to print a 1 dimensional array of integers
     public static void print_array(int[] arr) {
         for(int i = 0; i < arr.length; i++){
             System.out.print(arr[i] + ", ");
         }
     }
 
+    // Method to determine if a number is prime or not
+    public static boolean prime_check(int n) {
+        for(int i = n - 1; i > 1; i--){
+            if(n % i == 0)
+                return false;
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
-            char[] s = {'G', 'K', 'F', 'i', 'F', 'K', 'G'};
-        int num1 = 9;
+        int x = 9;
+        int y = 13;
         int[] numbers = {12, 35, 1, 10, 34, 1};
+        char[] s = {'G', 'K', 'F', 'i', 'F', 'K', 'G'};
 
         EvenOdd(numbers);
 
@@ -98,15 +108,19 @@ public class Problems {
         System.out.print("\nReversed Array: ");
         print_array(reverse_numbers);
 
-        System.out.println("\n\nFactorial of " + num1 + " is: " + recursive_factorial(num1));
+        System.out.println("\n\nFactorial of " + x + " is: " + recursive_factorial(x));
 
-        int[] fibo = fibonacci(num1);
-        System.out.print("\nFibonacci series upto number " + num1 + " is: ");
+        int[] fibo = fibonacci(x);
+        System.out.print("\nFibonacci series upto number " + x + " is: ");
         print_array(fibo);
 
         if(palindrome(s))
         System.out.println(new String(s) + " is a palindrome.");
         else
         System.out.println(new String(s) + " is not a palindrome.");
+
+        if(prime_check(y))
+            System.out.println(y + "\n is a prime numer");
+        else System.out.println(y + "\n is not a prime number");
     }
 }
