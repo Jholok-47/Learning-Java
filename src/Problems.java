@@ -143,13 +143,31 @@ public class Problems {
         return mid;
     }
 
+    // Method to find the number of vowerls in a given string
+    public static int vowels(String str) {
+        int count = 0;
+        for(int i = 0; i < str.length(); i++){
+            if(str.charAt(i) == 'a' || str.charAt(i) == 'e' ||
+                    str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u' ||
+                    str.charAt(i) == 'A' || str.charAt(i) == 'E' ||
+                    str.charAt(i) == 'I' || str.charAt(i) == 'O' || str.charAt(i) == 'U'){
+                count++;
+            }
+        }
+        return count;
+    }
+
     public static void main(String[] args) {
         int x = 9;
         int y = 13;
         int z = 57;
         int[] numbers = {12, 35, 1, 10, 34, 45, 23, 49, 81, 57};
         char[] s = {'G', 'K', 'F', 'i', 'F', 'K', 'G'};
+        String str1 = "A rabid dog bit me. Now I have rabies.";
         System.out.println("");
+
+        System.out.println(str1);
+        System.out.println("The number of vowels in the above sentence is: " + vowels(str1) + "\n");
 
         int[] sorted_numbers = sort(numbers);
         System.out.print("The sorted array: ");
