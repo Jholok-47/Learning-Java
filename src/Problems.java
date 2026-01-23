@@ -194,10 +194,38 @@ public class Problems {
         return addition;
     }
 
+    // Method to determine if a number is Armstrong number or not
+    public static void Armstrong(int n) {
+        int x = n;
+        int digit;
+        int arm = 0;
+        int count = 0;
+
+        // Counting the number of digits in the number
+        while(x / 10 != 0){
+            x = x / 10;
+            count++;
+        }
+
+        // Determining if it's Armstrong number or not
+        x = n;
+        for(int i = 0; i <= count; i++){
+            digit = x % 10;
+            x /= 10;
+            arm += Math.pow(digit, count+1);
+        }
+
+        System.out.println("");
+        if(arm == n)
+            System.out.println(n + " is an Armstrong number.");
+        else System.out.println(n + " is not an Armstrong number.");
+    }
+
     public static void main(String[] args) {
         int x = 9;
         int y = 13;
         int z = 57;
+        int Arm = 371;
         int[] numbers = {12, 35, 1, 10, 34, 45, 23, 49, 81, 57, 35, 45};
         int[][] twoDarr1 = {
                 {5, 4, 3, 2, 1},
@@ -252,6 +280,8 @@ public class Problems {
         if(prime_check(y))
             System.out.println("\n" + y + " is a prime number");
         else System.out.println("\n" + y + " is not a prime number");
+
+        Armstrong(Arm);
 
         EvenOdd(numbers);
 
