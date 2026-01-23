@@ -4,6 +4,7 @@ public class Problems {
         for(int i = 0; i < arr.length; i++){
             System.out.print(arr[i] + " ");
         }
+        System.out.println("");
     }
 
     // Method to check even and odd numbers in an array and count them
@@ -106,12 +107,56 @@ public class Problems {
         return false;
     }
 
+    // Method to sort an array in ascending order
+    public static int[] sort(int[] arr) {
+        for(int i = 0; i < arr.length - 1; i++){
+            for(int j = i + 1; j < arr.length; j++){
+                if(arr[i] > arr[j]){
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+
+    // Method to search an element from an array using binary search algorithm
+    public static int binary_search(int n, int[] arr) {
+        int left = 0;
+        int right = arr.length - 1;
+        int mid = (left + right)/2;
+
+        if(n < arr[left] || n > arr[right])
+            return -1;
+
+        while(arr[mid] != n){
+            if(n < arr[mid]){
+                right = mid - 1;
+                mid = (left + right)/2;
+            }
+            else if(n > arr[mid]){
+                left = mid + 1;
+                mid = (left + right)/2;
+            }
+        }
+        return mid;
+    }
+
     public static void main(String[] args) {
         int x = 9;
         int y = 13;
-        int z = 36;
-        int[] numbers = {12, 35, 1, 10, 34, 1};
+        int z = 57;
+        int[] numbers = {12, 35, 1, 10, 34, 45, 23, 49, 81, 57};
         char[] s = {'G', 'K', 'F', 'i', 'F', 'K', 'G'};
+        System.out.println("");
+
+        int[] sorted_numbers = sort(numbers);
+        System.out.print("The sorted array: ");
+        print_array(sorted_numbers);
+        if(binary_search(z, sorted_numbers) > 0)
+            System.out.println("The number " + z + " is in index " + binary_search(z, sorted_numbers));
+        else System.out.println("\n" + z + " does not exist in the array numbers.");
 
         if(linear_search(z, numbers))
             System.out.println("\n" + z + " exists in the array numbers");
@@ -121,14 +166,14 @@ public class Problems {
         System.out.print("\nReversed Array: ");
         print_array(reverse_numbers);
 
-        System.out.println("\n\nFactorial of " + x + " is: " + recursive_factorial(x));
+        System.out.println("\nFactorial of " + x + " is: " + recursive_factorial(x));
 
         int[] fibo = fibonacci(x);
         System.out.print("\nFibonacci series upto number " + x + " is: ");
         print_array(fibo);
 
         if(palindrome(s))
-        System.out.println("\n\n" + new String(s) + " is a palindrome.");
+        System.out.println("\n" + new String(s) + " is a palindrome.");
         else System.out.println("\n\n" + new String(s) + " is not a palindrome.");
 
         if(prime_check(y))
