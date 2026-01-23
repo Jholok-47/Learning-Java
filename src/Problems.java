@@ -7,6 +7,16 @@ public class Problems {
         System.out.println("");
     }
 
+    // Method to print a 2 dimensional array of integers
+    public static void print_2D_array(int[][] arr) {
+        for(int i = 0; i < arr.length; i++){
+            for(int j = 0; j < arr[i].length; j++){
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println("");
+        }
+    }
+
     // Method to check even and odd numbers in an array and count them
     public static void EvenOdd(int[] arr) {
         System.out.println("");
@@ -173,11 +183,36 @@ public class Problems {
         System.out.println("\n");
     }
 
+    // Method to add two 2D arrays
+    public static int[][] Add_2D_Arrays(int[][] arr1, int[][] arr2) {
+        int[][] addition = new int[5][5];
+        for(int i = 0; i < arr1.length; i++){
+            for(int j = 0; j < arr1[i].length; j++){
+                addition[i][j] = arr1[i][j] + arr2[i][j];
+            }
+        }
+        return addition;
+    }
+
     public static void main(String[] args) {
         int x = 9;
         int y = 13;
         int z = 57;
         int[] numbers = {12, 35, 1, 10, 34, 45, 23, 49, 81, 57, 35, 45};
+        int[][] twoDarr1 = {
+                {5, 4, 3, 2, 1},
+                {10, 9, 8, 7, 6},
+                {15, 14, 13, 12, 11},
+                {20, 19, 18, 17, 16},
+                {25, 24, 23, 22, 21}
+        };
+        int[][] twoDarr2 = {
+                {5, 6, 7, 8, 9},
+                {0, 1, 2, 3, 4},
+                {5, 6, 7, 8, 9},
+                {0, 1, 2, 3, 4},
+                {5, 6, 7, 8, 9}
+        };
         char[] s = {'G', 'K', 'F', 'i', 'F', 'K', 'G'};
         String str1 = "A rabid dog bit me. Now I have rabies.";
         System.out.println("");
@@ -219,5 +254,12 @@ public class Problems {
         else System.out.println("\n" + y + " is not a prime number");
 
         EvenOdd(numbers);
+
+        System.out.println("\nA 2 dimensional array: ");
+        print_2D_array(twoDarr1);
+        System.out.println("\nAnother 2 dimensional array: ");
+        print_2D_array(twoDarr2);
+        System.out.println("\nAddition of these two arrays: ");
+        print_2D_array(Add_2D_Arrays(twoDarr1, twoDarr2));
     }
 }
