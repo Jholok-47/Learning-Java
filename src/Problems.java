@@ -144,40 +144,60 @@ public class Problems {
     }
 
     // Method to find the number of vowerls in a given string
-    public static int vowels(String str) {
-        int count = 0;
+    public static void vowel_consonent(String str) {
+        int vowels = 0;
+        int consonents = 0;
+        str = str.toLowerCase();
         for(int i = 0; i < str.length(); i++){
-            if(str.charAt(i) == 'a' || str.charAt(i) == 'e' ||
-                    str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u' ||
-                    str.charAt(i) == 'A' || str.charAt(i) == 'E' ||
-                    str.charAt(i) == 'I' || str.charAt(i) == 'O' || str.charAt(i) == 'U'){
-                count++;
+            char ch = str.charAt(i);
+
+            if(ch >= 'a' && ch <= 'z'){
+                if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') vowels++;
+                else consonents++;
             }
         }
-        return count;
+        System.out.println("Calculating the numbers of vowels and consonents in the above sentence...");
+        System.out.println("Vowels = " + vowels);
+        System.out.println("Consonents = " + consonents + "\n");
+    }
+
+    // Method to print the duplicate elements in an array if thee are any
+    public static void duplicate(int[] arr) {
+        System.out.print("Duplicate elements in the array are: ");
+        for(int i = 0; i < arr.length - 1; i++){
+            for(int j = i + 1; j < arr.length; j++){
+                if(arr[i] == arr[j])
+                    System.out.print(arr[i] + " ");
+            }
+        }
+        System.out.println("\n");
     }
 
     public static void main(String[] args) {
         int x = 9;
         int y = 13;
         int z = 57;
-        int[] numbers = {12, 35, 1, 10, 34, 45, 23, 49, 81, 57};
+        int[] numbers = {12, 35, 1, 10, 34, 45, 23, 49, 81, 57, 35, 45};
         char[] s = {'G', 'K', 'F', 'i', 'F', 'K', 'G'};
         String str1 = "A rabid dog bit me. Now I have rabies.";
         System.out.println("");
 
         System.out.println(str1);
-        System.out.println("The number of vowels in the above sentence is: " + vowels(str1) + "\n");
+        vowel_consonent(str1);
+
+        duplicate(numbers);
+
+        System.out.print("Unsorted array: ");
+        print_array(numbers);
+        if(linear_search(z, numbers))
+            System.out.println(z + " exists in the array numbers.\n");
+        else System.out.println(z + " does not exist in the array numbers.\n");
 
         int[] sorted_numbers = sort(numbers);
-        System.out.print("The sorted array: ");
+        System.out.print("Sorted array: ");
         print_array(sorted_numbers);
         if(binary_search(z, sorted_numbers) > 0)
             System.out.println("The number " + z + " is in index " + binary_search(z, sorted_numbers));
-        else System.out.println("\n" + z + " does not exist in the array numbers.");
-
-        if(linear_search(z, numbers))
-            System.out.println("\n" + z + " exists in the array numbers");
         else System.out.println("\n" + z + " does not exist in the array numbers.");
 
         int[] reverse_numbers = reverse_array(numbers);
