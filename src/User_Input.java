@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class User_Input {
     // Method to print a 1 dimensional array of integers
     public static void print_array(int[] arr) {
