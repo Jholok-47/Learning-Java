@@ -1,13 +1,13 @@
 package ClassObject;
 
 public class Student {
-    private String name;
-    private String grade;
-    private int roll;
-    private String section;
-    private int age;
+     private String name;
+     private String grade;
+     private int roll;
+     private String section;
+     private int age;
 
-    // Constructor
+     // Constructor
     public Student(String name, String grade, int roll, String section, int age) {
         this.name = name;
         this.grade = grade;
