@@ -24,7 +24,4 @@ public class Student {
         System.out.println("Section: " + section);
         System.out.println("Age: " + age);
     }
-
-
-
 }
