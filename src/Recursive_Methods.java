@@ -1,15 +1,16 @@
 import java.util.Scanner;
+
 public class Recursive_Methods {
     public static int sum(int s, int i, int n) {
-            if(i > n) {
-                return s;
-            }
-            s += i;
-            return sum(s, i + 1, n);
+        if (i > n) {
+            return s;
+        }
+        s += i;
+        return sum(s, i + 1, n);
     }
 
     public static int factorial(int n) {
-        if(n == 0) {
+        if (n == 0) {
             return 1;
         } else {
             return n * factorial(n - 1);
