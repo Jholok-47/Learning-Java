@@ -1,3 +1,6 @@
+// This is a subclass of Series class specifically for Anime series
+// This is an example of Inheritance in OOP
+
 package ClassObject;
 
 public class Anime extends Series {

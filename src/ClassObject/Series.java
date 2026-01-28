@@ -1,3 +1,5 @@
+// This is the base class representing a TV series with various attributes and a method to display it's details.
+
 package ClassObject;
 
 public class Series {
@@ -23,8 +25,8 @@ public class Series {
         System.out.println("Genre: " + genre);
         System.out.println("Rating: " + rating);
         System.out.println("Language: " + language);
-        if(this.getClass() == Series.class) {
-            System.out.println();
+        if(this.getClass() == Series.class) {           //This is how to check if the object is of the base class type
+            System.out.println();                       //This is the way to avoid extra line break when called from subclass
         }
     }
 }

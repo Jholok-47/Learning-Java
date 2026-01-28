@@ -1,3 +1,5 @@
+//This is a class to represent a Student with various attributes and a method to display the student's information.
+
 package ClassObject;
 
 public class Student {
