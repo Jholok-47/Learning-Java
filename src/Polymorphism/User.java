@@ -1,4 +1,4 @@
-package Inheritance;
+package Polymorphism;
 
 public class User {
     private String username;
@@ -19,5 +19,10 @@ public class User {
     public String toString(){
         return "Username: " + username +
                 ", Email: " + email;
+    }
+
+    // Abstract method for monthly fee
+    public int monthlyFee() {
+        return 0;
     }
 }
