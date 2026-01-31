@@ -1,3 +1,5 @@
+package Inheritance;
+
 public class User {
     private String username;
     private String email;
@@ -11,11 +13,11 @@ public class User {
         this.password = password;
         this.phoneNumber = phoneNumber;
     }
-    // Method to display user details
-    public void displayInfo() {
-        System.out.println("Username: " + username);
-        System.out.println("Email: " + email);
-        System.out.println("Phone Number: " + phoneNumber);
-        System.out.println();
+
+    // Method Overriding
+    @Override
+    public String toString(){
+        return "Username: " + username +
+                ", Email: " + email;
     }
 }
