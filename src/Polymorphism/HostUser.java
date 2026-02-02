@@ -1,3 +1,4 @@
+// This is a subclass representing a host user in the system.
 package Polymorphism;
 
 public class HostUser extends User {
@@ -22,6 +23,7 @@ public class HostUser extends User {
         return hostMonthlyFee;
     }
 
+    // This method is the abstract method implementation from User class
     @Override
     public int monthlyFee() {
         return 30 * hostMonthlyFee;

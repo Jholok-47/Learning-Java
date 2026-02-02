@@ -1,3 +1,4 @@
+// This is another subclass representing a basic user in the system.
 package Polymorphism;
 
 public class BasicUser extends User{
@@ -21,6 +22,7 @@ public class BasicUser extends User{
         return basicMonthlyFee;
     }
 
+    // This method is the abstract method implementation from User class
     @Override
     public int monthlyFee() {
         return 30 * basicMonthlyFee;

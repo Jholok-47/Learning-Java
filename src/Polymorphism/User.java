@@ -1,3 +1,4 @@
+// This is the parent class for different types of users in a system.
 package Polymorphism;
 
 public class User {

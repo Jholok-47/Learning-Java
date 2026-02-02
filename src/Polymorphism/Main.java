@@ -1,3 +1,4 @@
+// Main method to demonstrate runtime polymorphism (Method Overriding) with User, HostUser, and BasicUser classes
 package Polymorphism;
 
 public class Main {
@@ -15,14 +16,15 @@ public class Main {
         System.out.println(monthlyChargeForUser(basicUser1));
     }
 
+    // Static or getter methods
     public static int monthlyChargeForHostUser(HostUser hostUser) {
         return 30 * hostUser.getHostMonthlyFee();
     }
-
     public static int monthlyChargeForBasicUser(BasicUser basicUser) {
         return 30 * basicUser.getBasicMonthlyFee();
     }
 
+    // Polymorphic method (Method overriding)
     public static int monthlyChargeForUser(User user) {
         return user.monthlyFee();
     }
