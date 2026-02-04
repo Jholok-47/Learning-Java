@@ -1,7 +1,7 @@
 // This is the parent class for different types of users in a system.
 package Polymorphism;
 
-public class User {
+public abstract class User {
     private String username;
     private String email;
     private String password;
@@ -23,7 +23,9 @@ public class User {
     }
 
     // Abstract method for monthly fee
-    public int monthlyFee() {
-        return 0;
+    public abstract int monthlyFee();
+
+    public static String userType() {
+        return "Generic User";
     }
 }
