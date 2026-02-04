@@ -12,4 +12,6 @@ not allowing multiple inheritance of classes, but it allows multiple inheritance
 
 4. Method of a subclass cannot return private members of the parent class.
 
+5. Two things have to be same for method overriding. Name and return type. It's called a method's signature.
+
 

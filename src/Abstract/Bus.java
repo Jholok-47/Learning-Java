@@ -16,12 +16,4 @@ public class Bus extends Vehicle{
     public String toString() {
         return super.toString() + ", Speed: " + speed;
     }
-
-    public static void main(String args[]) {
-        Vehicle bus = new Bus(4, true, "Moderately fast.");
-
-        bus.move();
-
-        System.out.println(bus);
-    }
 }

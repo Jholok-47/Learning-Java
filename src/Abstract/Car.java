@@ -1,15 +1,15 @@
 package Abstract;
 
-public class Rickshaw extends Vehicle{
+public class Car extends Vehicle{
     String speed;
-    public Rickshaw(int wheels, boolean hasEngine, String speed) {
+    public Car(int wheels, boolean hasEngine, String speed) {
         super(wheels, hasEngine);
         this.speed = speed;
     }
 
     @Override
     public void move() {
-        System.out.println("Rickshaw goes ring ring");
+        System.out.println("Car goes shoo shoo.");
     }
 
     @Override
