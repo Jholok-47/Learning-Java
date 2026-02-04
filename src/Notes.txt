@@ -10,4 +10,6 @@ the parent class before adding additional functionality in the subclass.
 inherit from a common superclass. This can lead to ambiguity in method resolution. Java avoids this problem by
 not allowing multiple inheritance of classes, but it allows multiple inheritance of interfaces.
 
+4. Method of a subclass cannot return private members of the parent class.
+
 

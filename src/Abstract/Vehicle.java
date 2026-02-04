@@ -9,5 +9,9 @@ public abstract class Vehicle {
         this.hasEngine = hasEngine;
     }
 
+    public String toString() {
+        return "Wheels: " + wheels + ", Has engine? - " + hasEngine;
+    }
+
     public abstract void move();
 }
