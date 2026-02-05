@@ -14,4 +14,10 @@ not allowing multiple inheritance of classes, but it allows multiple inheritance
 
 5. Two things have to be same for method overriding. Name and return type. It's called a method's signature.
 
+6. Abstract class means no objects can be created and abstract method means it cannot have any body.
+An abstract class may not contain an abstract method. But an abstract method needs to be in an abstract class.
+
+7. If change in one class should not affect other classes, then use interface. It's called coding against interface.
+If change in one class can affect other classes, that point of affect is called coupling point.
+
 
