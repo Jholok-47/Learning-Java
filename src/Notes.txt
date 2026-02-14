@@ -19,5 +19,3 @@ An abstract class may not contain an abstract method. But an abstract method nee
 
 7. If change in one class should not affect other classes, then use interface. It's called coding against interface.
 If change in one class can affect other classes, that point of affect is called coupling point.
-
-
