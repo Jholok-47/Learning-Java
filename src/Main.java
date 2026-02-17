@@ -14,5 +14,15 @@ public class Main {
         System.out.println(str.concat("oOo"));
         System.out.println(str.contains("Morghulis"));
         System.out.println(str.indexOf("r"));
+        System.out.println(str);
+        
+        String a = "Helloo";
+        System.out.println(a);
+
+        String b = "Hello";
+        System.out.println(b.charAt(1));
+
+        System.out.println(b.compareTo(a));
+        System.out.println(a == b);
     }
 }
