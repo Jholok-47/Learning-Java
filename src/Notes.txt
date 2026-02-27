@@ -19,3 +19,8 @@ An abstract class may not contain an abstract method. But an abstract method nee
 
 7. If change in one class should not affect other classes, then use interface. It's called coding against interface.
 If change in one class can affect other classes, that point of affect is called coupling point.
+
+8. Hashmap - A data structure that stores key-value pairs. It allows for fast retrieval of values based on their keys.
+In Java, HashMap is part of the java.util package and implements the Map interface. It does not maintain any order of the elements
+and allows one null key and multiple null values. HashMap is not synchronized, which means it is not thread-safe.
+If you need a thread-safe version, you can use ConcurrentHashMap or Collections.synchronizedMap() to wrap a HashMap.
