@@ -1,18 +1,15 @@
 package Generics;
 
-public class MyGenericList <T> {
-    private Object[] arr = new Object[10];
+public class MyGenericList <T extends Number> {
+    private T[] arr;
 
     private int count = 0;
 
+    public MyGenericList(T[] arr) {     // Constructor that takes an array of type T as a parameter
+        this.arr = arr;
+    }
+
     public void add(T element){
-        if(count == arr.length){
-            Object[] newArr = new Object[arr.length * 2];
-            for(int i = 0; i < arr.length; i++){
-                newArr[i] = arr[i];
-            }
-            arr = newArr;
-        }
         arr[count++] = element;
     }
 
@@ -25,5 +22,19 @@ public class MyGenericList <T> {
 
     public int length() {
         return count;
+    }
+
+    public <T extends Double> T avg(){
+        if(count == 0){
+            throw new IllegalStateException("List is empty");
+        }
+        if(!(arr[0] instanceof Number)){
+            throw new IllegalStateException("Elements are not numbers");
+        }
+        double sum = 0;
+        for(int i = 0; i < count; i++){
+            sum += arr[i].doubleValue();
+        }
+        return (T) Double.valueOf(sum / count); // Double.valueOf() converts the primitive double to a Double object
     }
 }
